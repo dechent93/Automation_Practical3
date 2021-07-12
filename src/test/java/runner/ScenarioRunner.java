@@ -14,7 +14,7 @@ import cucumber.api.junit.Cucumber;
 	@CucumberOptions(
 						features = "classpath:features",
 						glue= "steps",
-						tags = "@Scenario1",
+						tags = "@Scenario1,@Scenario2",
 						monochrome =true,
 						dryRun = false,
 						plugin = {

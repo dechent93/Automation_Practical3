@@ -14,7 +14,7 @@ public class WhiteBackground {
 
 	}
 
-	@FindBy(how = How.CSS, using ="//button[@onclick=\"myFunctionWhite()\"]")
+	@FindBy(how = How.XPATH, using ="//button[@onclick=\"myFunctionWhite()\"]")
 	WebElement White_Background;
 
 	public void clickOnSetWhiteBackground() {
