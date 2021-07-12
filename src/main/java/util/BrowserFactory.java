@@ -1,6 +1,7 @@
 package util;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,12 +17,14 @@ public class BrowserFactory {
 
 	static WebDriver driver;
 
-	public static WebDriver startBrowser() {
+	public static WebDriver init() {
 		System.getProperty("Webdriver.chrome.driver", "chromedriver");
 		driver = new ChromeDriver();
+
+		driver.get("https://techfios.com/test/101/");
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
 
 	}
@@ -37,8 +40,11 @@ public class BrowserFactory {
 
 	}
 
-	public static void tearDown() {
+	public static WebDriver tearDown() {
 		driver.close();
 		driver.quit();
+		return driver;
+
 	}
+
 }

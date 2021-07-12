@@ -24,7 +24,7 @@ import cucumber.api.junit.Cucumber;
 							}
 							)
 	
-	public class LoginRunner {
+	public class ScenarioRunner {
 
 }
 
